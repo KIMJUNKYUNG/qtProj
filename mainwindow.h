@@ -2,8 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+
 #include <QPushButton>
-#include <QObject>
+#include <QStringListModel>
+#include <QListWidgetItem>
+
+#include "calculator.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,6 +23,11 @@ private slots:
 
 private:
     QStringList btnOptions;
+    QPushButton *calButtonList[20];
+
+    QStringList qStrList;
+
+    void disableCalculateBtn();
 public:
     MainWindow(QWidget *parent = nullptr);
 
