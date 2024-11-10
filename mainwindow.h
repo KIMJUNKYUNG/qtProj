@@ -25,9 +25,11 @@ private:
     QStringList btnOptions;
     QPushButton *calButtonList[20];
 
-    QStringList qStrList;
+    QStringList qStrListNumbers;
+    QStringList qStrListCalculator;
 
     void disableCalculateBtn();
+    double calculate(double, double, QString);
 public:
     MainWindow(QWidget *parent = nullptr);
 
