@@ -1,0 +1,9 @@
+/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/qtProj.dir
+/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/edit_cache.dir
+/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/rebuild_cache.dir
+/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/list_install_components.dir
+/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/install.dir
+/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/install/local.dir
+/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/install/strip.dir
+/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/qtProj_autogen_timestamp_deps.dir
+/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/qtProj_autogen.dir
