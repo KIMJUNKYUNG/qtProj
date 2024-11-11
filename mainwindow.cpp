@@ -38,9 +38,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->pushButton_equal, &QPushButton::released, this, &MainWindow::slotPushedButton);
 
-    qStrListNumbers.append("");
-    qStrListCalculator.append("");  //한칸 공백
-
+    qStrListNumbers.append(""); // First Number Space Add
 }
 
 void MainWindow::disableCalculateBtn(){
@@ -64,73 +62,71 @@ void MainWindow::slotPushedButton()
     QString senderName = QObject::sender()->objectName();
     int senderIndex = btnOptions.indexOf(senderName);
 
-    if( senderIndex == 10 ||     // +
-        senderIndex == 11 ||     // -
-        senderIndex == 12 ||     // *
-        senderIndex == 13        // /
-        ){
-        qStrListNumbers.append(""); //When Calcualting go to next Index Number;
-    }
+    if(senderIndex >= 0 && senderIndex <= 9){
+        switch (senderIndex) {      // Numbers
+        case 0:
+            qStrListNumbers[qStrListNumbers.count() - 1].append("0");
+            break;
+        case 1:
+            qStrListNumbers[qStrListNumbers.count() - 1].append("1");
+            break;
+        case 2:
+            qStrListNumbers[qStrListNumbers.count() - 1].append("2");
+            break;
+        case 3:
+            qStrListNumbers[qStrListNumbers.count() - 1].append("3");
+            break;
+        case 4:
+            qStrListNumbers[qStrListNumbers.count() - 1].append("4");
+            break;
+        case 5:
+            qStrListNumbers[qStrListNumbers.count() - 1].append("5");
+            break;
+        case 6:
+            qStrListNumbers[qStrListNumbers.count() - 1].append("6");
+            break;
+        case 7:
+            qStrListNumbers[qStrListNumbers.count() - 1].append("7");
+            break;
+        case 8:
+            qStrListNumbers[qStrListNumbers.count() - 1].append("8");
+            break;
+        case 9:
+            qStrListNumbers[qStrListNumbers.count() - 1].append("9");
+            break;
+        }
+    }else{      // Operator
+        if(senderIndex == 14){
+            double result = 0;
+            for(int i = 0; i < qStrListCalculator.length(); i++){
+                result = qStrListNumbers[i].toDouble();
+                double secondNum = qStrListNumbers[i+1].toDouble();
 
-    switch (senderIndex) {
-    case 0:
-        qStrListNumbers[qStrListNumbers.count() - 1].append("0");
-        break;
-    case 1:
-        qStrListNumbers[qStrListNumbers.count() - 1].append("1");
-        break;
-    case 2:
-        qStrListNumbers[qStrListNumbers.count() - 1].append("2");
-        break;
-    case 3:
-        qStrListNumbers[qStrListNumbers.count() - 1].append("3");
-        break;
-    case 4:
-        qStrListNumbers[qStrListNumbers.count() - 1].append("4");
-        break;
-    case 5:
-        qStrListNumbers[qStrListNumbers.count() - 1].append("5");
-        break;
-    case 6:
-        qStrListNumbers[qStrListNumbers.count() - 1].append("6");
-        break;
-    case 7:
-        qStrListNumbers[qStrListNumbers.count() - 1].append("7");
-        break;
-    case 8:
-        qStrListNumbers[qStrListNumbers.count() - 1].append("8");
-        break;
-    case 9:
-        qStrListNumbers[qStrListNumbers.count() - 1].append("9");
-        break;
-    case 10:    //plus
-        qStrListCalculator.append(("+"));
-        break;
-    case 11:    //minus
-        qStrListCalculator.append(("-"));
-        break;
-    case 12:    //multiply
-        qStrListCalculator.append(("*"));
-        break;
-    case 13:    //divide
-        qStrListCalculator.append(("/"));
-        break;
-    case 14:    // equal
-        double firstNum = qStrListNumbers[qStrListNumbers.length() -2].toDouble();
-        double secondNum = qStrListNumbers[qStrListNumbers.length() -1].toDouble();
+                QString curOperator = qStrListCalculator[i];
 
-        QString curOperator = qStrListCalculator[qStrListCalculator.count() - 1];
+                result = calculate(result, secondNum,curOperator);
+            }
+            qStrListCalculator.append(("="));
+            qStrListNumbers.append(QString::number(result));
+        }else{
+            qStrListNumbers.append("");
 
-        double result = calculate(firstNum, secondNum,curOperator);
-
-        qStrListCalculator.append(("="));
-        qStrListNumbers.append(QString::number(result));
-        break;
+            if  (senderIndex == 10){
+                qStrListCalculator.append(("+"));
+            }else if(senderIndex == 11){
+                qStrListCalculator.append(("-"));
+            }else if(senderIndex == 12){
+                qStrListCalculator.append(("*"));
+            }else if(senderIndex == 13){
+                qStrListCalculator.append(("/"));
+            }
+        }
     }
 
     ui->listWidgetNumbers->clear();
     ui->listWidgetCalculator->clear();
 
+    ui->listWidgetCalculator->addItem("");
     ui->listWidgetNumbers->addItems(qStrListNumbers);
     ui->listWidgetCalculator->addItems(qStrListCalculator);
 }
