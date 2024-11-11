@@ -64,19 +64,12 @@ void MainWindow::slotPushedButton()
     QString senderName = QObject::sender()->objectName();
     int senderIndex = btnOptions.indexOf(senderName);
 
-    if(senderIndex >= 0 && senderIndex <= 9 || senderIndex == 14){
-        ui->listWidgetNumbers->clear();
-    }
-    else if(
-        senderIndex == 10 ||     // +
+    if( senderIndex == 10 ||     // +
         senderIndex == 11 ||     // -
         senderIndex == 12 ||     // *
         senderIndex == 13        // /
         ){
-        ui->listWidgetCalculator->clear();
-
-        qStrListCalculator.append("");
-        qStrListNumbers.append("");
+        qStrListNumbers.append(""); //When Calcualting go to next Index Number;
     }
 
     switch (senderIndex) {
@@ -111,38 +104,35 @@ void MainWindow::slotPushedButton()
         qStrListNumbers[qStrListNumbers.count() - 1].append("9");
         break;
     case 10:    //plus
-        qStrListCalculator[qStrListCalculator.count()- 1].append(("+"));
+        qStrListCalculator.append(("+"));
         break;
     case 11:    //minus
-        qStrListCalculator[qStrListCalculator.count()- 1].append(("-"));
+        qStrListCalculator.append(("-"));
         break;
     case 12:    //multiply
-        qStrListCalculator[qStrListCalculator.count()- 1].append(("*"));
+        qStrListCalculator.append(("*"));
         break;
     case 13:    //divide
-        qStrListCalculator[qStrListCalculator.count()- 1].append(("/"));
+        qStrListCalculator.append(("/"));
         break;
     case 14:    // equal
         double firstNum = qStrListNumbers[qStrListNumbers.length() -2].toDouble();
         double secondNum = qStrListNumbers[qStrListNumbers.length() -1].toDouble();
 
-        double result = calculate(firstNum, secondNum, qStrListCalculator[qStrListCalculator.count() - 1]);
+        QString curOperator = qStrListCalculator[qStrListCalculator.count() - 1];
+
+        double result = calculate(firstNum, secondNum,curOperator);
+
+        qStrListCalculator.append(("="));
         qStrListNumbers.append(QString::number(result));
-        ui->listWidgetNumbers->addItems(qStrListNumbers);
-        return;
         break;
     }
 
-    if(senderIndex >= 0 && senderIndex <= 9){
-        ui->listWidgetNumbers->addItems(qStrListNumbers);
-    }else if(
-        senderIndex == 10 ||
-        senderIndex == 11 ||
-        senderIndex == 12 ||
-        senderIndex == 13
-        ){
-        ui->listWidgetCalculator->addItems(qStrListCalculator);
-    }
+    ui->listWidgetNumbers->clear();
+    ui->listWidgetCalculator->clear();
+
+    ui->listWidgetNumbers->addItems(qStrListNumbers);
+    ui->listWidgetCalculator->addItems(qStrListCalculator);
 }
 
 MainWindow::~MainWindow()
