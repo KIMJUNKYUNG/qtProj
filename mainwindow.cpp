@@ -4,6 +4,8 @@
 #include <iostream>
 #include <QAbstractItemView>
 
+#define height 457
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -42,6 +44,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->listWidgetNumbers->setStyleSheet("QScrollBar {height:0px;}");
     ui->listWidgetCalculator->setStyleSheet("QScrollBar {height:0px;}");
+
+    ui->pushButton_clear->setStyleSheet("QPushButton { color: red; }");
 }
 
 void MainWindow::disableCalculateBtn(){
