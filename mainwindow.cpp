@@ -39,6 +39,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_equal, &QPushButton::released, this, &MainWindow::slotPushedButton);
 
     qStrListNumbers.append(""); // First Number Space Add
+
+    ui->listWidgetNumbers->setStyleSheet("QScrollBar {height:0px;}");
+    ui->listWidgetCalculator->setStyleSheet("QScrollBar {height:0px;}");
 }
 
 void MainWindow::disableCalculateBtn(){
@@ -130,6 +133,9 @@ void MainWindow::slotPushedButton()
 
     ui->listWidgetCalculator->addItem("");
     ui->listWidgetCalculator->addItems(qStrListCalculator);
+
+    ui->listWidgetNumbers->scrollToBottom();
+    ui->listWidgetCalculator->scrollToBottom();
 
     for(int i = 0; i < qStrListCalculator.length() + 1; i++){
         ui->listWidgetCalculator->item(i)->setForeground(Qt::green);
