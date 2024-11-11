@@ -126,9 +126,14 @@ void MainWindow::slotPushedButton()
     ui->listWidgetNumbers->clear();
     ui->listWidgetCalculator->clear();
 
-    ui->listWidgetCalculator->addItem("");
     ui->listWidgetNumbers->addItems(qStrListNumbers);
+
+    ui->listWidgetCalculator->addItem("");
     ui->listWidgetCalculator->addItems(qStrListCalculator);
+
+    for(int i = 0; i < qStrListCalculator.length() + 1; i++){
+        ui->listWidgetCalculator->item(i)->setForeground(Qt::green);
+    }
 }
 
 MainWindow::~MainWindow()
