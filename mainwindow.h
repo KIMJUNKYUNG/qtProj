@@ -29,6 +29,8 @@ private:
     QStringList qStrListNumbers;
     QStringList qStrListCalculator;
 
+    void initMdl();
+
     void setDisabledCalBtn();
     void setEnabledCalBtn();
 

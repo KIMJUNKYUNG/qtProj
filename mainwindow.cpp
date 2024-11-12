@@ -42,12 +42,16 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->pushButton_clear, &QPushButton::released, this, &MainWindow::slotClear);
 
-    qStrListNumbers.append(""); // First Number Space Add
-
     ui->listWidgetNumbers->setStyleSheet("QScrollBar {height:0px;}");
     ui->listWidgetCalculator->setStyleSheet("QScrollBar {height:0px;}");
 
     ui->pushButton_clear->setStyleSheet("QPushButton { color: red; }");
+
+    initMdl();
+}
+
+void MainWindow::initMdl(){
+    qStrListNumbers.append(""); // First Number Space Add
 }
 
 void MainWindow::setDisabledCalBtn(){
@@ -91,6 +95,8 @@ void MainWindow::slotClear(){
 
     ui->listWidgetCalculator->clear();
     ui->listWidgetNumbers->clear();
+
+    this->initMdl();
 }
 
 void MainWindow::slotPushedButton()
@@ -133,12 +139,15 @@ void MainWindow::slotPushedButton()
         }
     }else{      // Operator
         if(senderIndex == 14){      // =
-            double result = 0;
+            double result = qStrListNumbers[0].toDouble();;
             for(int i = 0; i < qStrListCalculator.length(); i++){
-                result = qStrListNumbers[i].toDouble();
                 double secondNum = qStrListNumbers[i+1].toDouble();
 
                 QString curOperator = qStrListCalculator[i];
+
+                if(curOperator == "="){
+                    continue;
+                }
 
                 result = calculate(result, secondNum,curOperator);
             }
