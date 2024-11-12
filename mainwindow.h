@@ -21,6 +21,7 @@ class MainWindow : public QMainWindow
 private slots:
     void slotPushedButton();
     void slotClear();
+    void slotEscape();
 
 private:
     QStringList btnOptions;
@@ -30,6 +31,7 @@ private:
     QStringList qStrListCalculator;
 
     void initMdl();
+    void resetUiPolicy();
 
     void setDisabledCalBtn();
     void setEnabledCalBtn();

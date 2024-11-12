@@ -41,6 +41,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_equal, &QPushButton::released, this, &MainWindow::slotPushedButton);
 
     connect(ui->pushButton_clear, &QPushButton::released, this, &MainWindow::slotClear);
+     connect(ui->pushButton_escape, &QPushButton::released, this, &MainWindow::slotEscape);
 
     ui->listWidgetNumbers->setStyleSheet("QScrollBar {height:0px;}");
     ui->listWidgetCalculator->setStyleSheet("QScrollBar {height:0px;}");
@@ -87,6 +88,15 @@ double MainWindow::calculate(double first, double second, QString cal){
     }
 }
 
+void MainWindow::resetUiPolicy(){
+    for(int i = 0; i < qStrListCalculator.length() + 1; i++){
+        ui->listWidgetCalculator->item(i)->setForeground(Qt::green);
+        ui->listWidgetCalculator->item(i)->setTextAlignment(Qt::AlignHCenter);
+
+        ui->listWidgetNumbers->item(i)->setTextAlignment(Qt::AlignRight);
+    }
+}
+
 void MainWindow::slotClear(){
     this->setEnabledCalBtn();
 
@@ -97,6 +107,23 @@ void MainWindow::slotClear(){
     ui->listWidgetNumbers->clear();
 
     this->initMdl();
+}
+
+void MainWindow::slotEscape(){
+    int len = qStrListNumbers.length();
+    if(len == 0){
+        return;
+    }else if(qStrListNumbers[len - 1].length() == 0){
+        return;
+    }
+
+    int curNumLen = qStrListNumbers[len -1].length();
+    qStrListNumbers[len -1].remove(curNumLen - 1, 1);
+
+    ui->listWidgetNumbers->clear();
+    ui->listWidgetNumbers->addItems(qStrListNumbers);
+
+    resetUiPolicy();
 }
 
 void MainWindow::slotPushedButton()
@@ -183,12 +210,7 @@ void MainWindow::slotPushedButton()
     ui->listWidgetNumbers->scrollToBottom();
     ui->listWidgetCalculator->scrollToBottom();
 
-    for(int i = 0; i < qStrListCalculator.length() + 1; i++){
-        ui->listWidgetCalculator->item(i)->setForeground(Qt::green);
-        ui->listWidgetCalculator->item(i)->setTextAlignment(Qt::AlignHCenter);
-
-        ui->listWidgetNumbers->item(i)->setTextAlignment(Qt::AlignRight);
-    }
+    resetUiPolicy();
 }
 
 MainWindow::~MainWindow()
