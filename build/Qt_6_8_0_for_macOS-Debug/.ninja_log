@@ -84,3 +84,17 @@
 5	26	1731415745515189617	/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/qtProj_autogen/mocs_compilation.cpp	337a690579907e3d
 26	695	1731415745536591973	CMakeFiles/qtProj.dir/mainwindow.cpp.o	e01aeb280c84dfd2
 695	776	1731415746205955141	qtProj.app/Contents/MacOS/qtProj	e5d56a09a834fb5b
+6	113	1731416425191747000	qtProj_autogen/timestamp	337a690579907e3d
+6	113	1731416425191747000	qtProj_autogen/mocs_compilation.cpp	337a690579907e3d
+6	113	1731416425191747000	/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/qtProj_autogen/timestamp	337a690579907e3d
+6	113	1731416425191747000	/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/qtProj_autogen/mocs_compilation.cpp	337a690579907e3d
+113	794	1731416425198368139	CMakeFiles/qtProj.dir/qtProj_autogen/mocs_compilation.cpp.o	bb5e168ad43eb83
+114	795	1731416425198524101	CMakeFiles/qtProj.dir/main.cpp.o	a9be0f045e3d333a
+114	881	1731416425198619437	CMakeFiles/qtProj.dir/mainwindow.cpp.o	e01aeb280c84dfd2
+881	957	1731416425965848242	qtProj.app/Contents/MacOS/qtProj	e5d56a09a834fb5b
+4	25	1731416454675509586	qtProj_autogen/timestamp	337a690579907e3d
+4	25	1731416454675509586	qtProj_autogen/mocs_compilation.cpp	337a690579907e3d
+4	25	1731416454675509586	/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/qtProj_autogen/timestamp	337a690579907e3d
+4	25	1731416454675509586	/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/qtProj_autogen/mocs_compilation.cpp	337a690579907e3d
+25	700	1731416454696928318	CMakeFiles/qtProj.dir/mainwindow.cpp.o	e01aeb280c84dfd2
+700	784	1731416455372144975	qtProj.app/Contents/MacOS/qtProj	e5d56a09a834fb5b

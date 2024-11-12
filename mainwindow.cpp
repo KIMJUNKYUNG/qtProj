@@ -40,6 +40,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->pushButton_equal, &QPushButton::released, this, &MainWindow::slotPushedButton);
 
+    connect(ui->pushButton_clear, &QPushButton::released, this, &MainWindow::slotClear);
+
     qStrListNumbers.append(""); // First Number Space Add
 
     ui->listWidgetNumbers->setStyleSheet("QScrollBar {height:0px;}");
@@ -79,6 +81,16 @@ double MainWindow::calculate(double first, double second, QString cal){
     }else if(cal == "/"){
         return first / second;
     }
+}
+
+void MainWindow::slotClear(){
+    this->setEnabledCalBtn();
+
+    this->qStrListNumbers.clear();
+    this->qStrListCalculator.clear();
+
+    ui->listWidgetCalculator->clear();
+    ui->listWidgetNumbers->clear();
 }
 
 void MainWindow::slotPushedButton()

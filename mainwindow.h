@@ -20,6 +20,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 private slots:
     void slotPushedButton();
+    void slotClear();
 
 private:
     QStringList btnOptions;
