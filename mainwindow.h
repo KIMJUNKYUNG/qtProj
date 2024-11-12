@@ -28,7 +28,9 @@ private:
     QStringList qStrListNumbers;
     QStringList qStrListCalculator;
 
-    void disableCalculateBtn();
+    void setDisabledCalBtn();
+    void setEnabledCalBtn();
+
     double calculate(double, double, QString);
 public:
     MainWindow(QWidget *parent = nullptr);

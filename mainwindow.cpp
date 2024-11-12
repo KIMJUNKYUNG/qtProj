@@ -48,8 +48,25 @@ MainWindow::MainWindow(QWidget *parent)
     ui->pushButton_clear->setStyleSheet("QPushButton { color: red; }");
 }
 
-void MainWindow::disableCalculateBtn(){
+void MainWindow::setDisabledCalBtn(){
 
+    ui->pushButton_divide->setDisabled(true);
+    ui->pushButton_multiply->setDisabled(true);
+    ui->pushButton_escape->setDisabled(true);
+    ui->pushButton_divide->setDisabled(true);
+
+    ui->pushButton_plusMinus->setDisabled(true);
+    ui->pushButton_escape->setDisabled(true);
+}
+
+void MainWindow::setEnabledCalBtn(){
+    ui->pushButton_divide->setEnabled(true);
+    ui->pushButton_divide->setEnabled(true);
+    ui->pushButton_multiply->setEnabled(true);
+    ui->pushButton_escape->setEnabled(true);
+
+    ui->pushButton_plusMinus->setEnabled(true);
+    ui->pushButton_escape->setEnabled(true);
 }
 
 double MainWindow::calculate(double first, double second, QString cal){
@@ -103,7 +120,7 @@ void MainWindow::slotPushedButton()
             break;
         }
     }else{      // Operator
-        if(senderIndex == 14){
+        if(senderIndex == 14){      // =
             double result = 0;
             for(int i = 0; i < qStrListCalculator.length(); i++){
                 result = qStrListNumbers[i].toDouble();
@@ -115,7 +132,9 @@ void MainWindow::slotPushedButton()
             }
             qStrListCalculator.append(("="));
             qStrListNumbers.append(QString::number(result));
-        }else{
+
+            this->setEnabledCalBtn();
+        }else{      // + - * /
             qStrListNumbers.append("");
 
             if  (senderIndex == 10){
@@ -127,6 +146,8 @@ void MainWindow::slotPushedButton()
             }else if(senderIndex == 13){
                 qStrListCalculator.append(("/"));
             }
+
+            this->setDisabledCalBtn();
         }
     }
 
