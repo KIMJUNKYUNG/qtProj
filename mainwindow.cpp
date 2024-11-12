@@ -185,6 +185,9 @@ void MainWindow::slotPushedButton()
 
     for(int i = 0; i < qStrListCalculator.length() + 1; i++){
         ui->listWidgetCalculator->item(i)->setForeground(Qt::green);
+        ui->listWidgetCalculator->item(i)->setTextAlignment(Qt::AlignHCenter);
+
+        ui->listWidgetNumbers->item(i)->setTextAlignment(Qt::AlignRight);
     }
 }
 

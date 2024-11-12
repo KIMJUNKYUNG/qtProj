@@ -449,7 +449,7 @@
         </font>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::LayoutDirection::RightToLeft</enum>
+        <enum>Qt::LayoutDirection::LeftToRight</enum>
        </property>
        <property name="textElideMode">
         <enum>Qt::TextElideMode::ElideRight</enum>
