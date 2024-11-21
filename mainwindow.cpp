@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     btnOptions <<"pushButton_0"<<"pushButton_1" <<"pushButton_2" <<"pushButton_3" <<"pushButton_4"
                <<"pushButton_5" <<"pushButton_6" <<"pushButton_7" <<"pushButton_8" <<"pushButton_9"
                <<"pushButton_plus"<<"pushButton_subtraction"<<"pushButton_multiply"<<"pushButton_divide"
-               <<"pushButton_equal"<<"pushButton_dot";
+               <<"pushButton_equal"<<"pushButton_dot"<<"pushButton_plusMinus";
 
     calButtonList[0] = ui->pushButton_plus;
     calButtonList[1] = ui->pushButton_subtraction;
@@ -40,7 +40,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->pushButton_equal, &QPushButton::released, this, &MainWindow::slotPushedButton);
     connect(ui->pushButton_dot, &QPushButton::released, this, &MainWindow::slotPushedButton);
-
+    connect(ui->pushButton_plusMinus, &QPushButton::released, this, &MainWindow::slotPushedButton);
 
     connect(ui->pushButton_clear, &QPushButton::released, this, &MainWindow::slotClear);
     connect(ui->pushButton_escape, &QPushButton::released, this, &MainWindow::slotEscape);
@@ -173,6 +173,17 @@ void MainWindow::slotPushedButton()
             return;
         }
         qStrListNumbers[qStrListNumbers.count() - 1].append(".");
+    }else if(senderIndex == 16){
+        QString curStr = qStrListNumbers[qStrListNumbers.count() - 1];
+        if(curStr == ""){
+            qStrListNumbers[qStrListNumbers.count() - 1].append("-");
+        }else{
+            if(curStr[0] == "-"){
+                qStrListNumbers[qStrListNumbers.count() - 1].replace("-", "");
+            }else{
+                qStrListNumbers[qStrListNumbers.count() - 1] = "-" + curStr;
+            }
+        }
     }else{      // Operator
         if(senderIndex == 14){      // =
             double result = qStrListNumbers[0].toDouble();
