@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     btnOptions <<"pushButton_0"<<"pushButton_1" <<"pushButton_2" <<"pushButton_3" <<"pushButton_4"
                <<"pushButton_5" <<"pushButton_6" <<"pushButton_7" <<"pushButton_8" <<"pushButton_9"
                <<"pushButton_plus"<<"pushButton_subtraction"<<"pushButton_multiply"<<"pushButton_divide"
-               <<"pushButton_equal";
+               <<"pushButton_equal"<<"pushButton_dot";
 
     calButtonList[0] = ui->pushButton_plus;
     calButtonList[1] = ui->pushButton_subtraction;
@@ -39,9 +39,12 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_divide, &QPushButton::released, this, &MainWindow::slotPushedButton);
 
     connect(ui->pushButton_equal, &QPushButton::released, this, &MainWindow::slotPushedButton);
+    connect(ui->pushButton_dot, &QPushButton::released, this, &MainWindow::slotPushedButton);
+
 
     connect(ui->pushButton_clear, &QPushButton::released, this, &MainWindow::slotClear);
-     connect(ui->pushButton_escape, &QPushButton::released, this, &MainWindow::slotEscape);
+    connect(ui->pushButton_escape, &QPushButton::released, this, &MainWindow::slotEscape);
+
 
     ui->listWidgetNumbers->setStyleSheet("QScrollBar {height:0px;}");
     ui->listWidgetCalculator->setStyleSheet("QScrollBar {height:0px;}");
@@ -164,15 +167,22 @@ void MainWindow::slotPushedButton()
             qStrListNumbers[qStrListNumbers.count() - 1].append("9");
             break;
         }
+    }else if(senderIndex == 15){
+        QString curStr = qStrListNumbers[qStrListNumbers.count() - 1];
+        if(curStr == ""){
+            return;
+        }
+        qStrListNumbers[qStrListNumbers.count() - 1].append(".");
     }else{      // Operator
         if(senderIndex == 14){      // =
-            double result = qStrListNumbers[0].toDouble();;
+            double result = qStrListNumbers[0].toDouble();
             for(int i = 0; i < qStrListCalculator.length(); i++){
                 double secondNum = qStrListNumbers[i+1].toDouble();
 
                 QString curOperator = qStrListCalculator[i];
 
                 if(curOperator == "="){
+                    result = secondNum;
                     continue;
                 }
 
