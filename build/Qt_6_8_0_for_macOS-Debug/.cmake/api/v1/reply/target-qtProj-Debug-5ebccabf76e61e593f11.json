@@ -72,13 +72,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 63,
+				"line" : 68,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 46,
+				"line" : 51,
 				"parent" : 0
 			},
 			{
@@ -331,7 +331,9 @@
 			[
 				0,
 				1,
-				2
+				2,
+				5,
+				8
 			]
 		}
 	],
@@ -452,7 +454,9 @@
 			[
 				0,
 				1,
-				2
+				2,
+				5,
+				8
 			]
 		},
 		{
@@ -460,8 +464,9 @@
 			"sourceIndexes" : 
 			[
 				3,
-				5,
-				6
+				6,
+				7,
+				9
 			]
 		},
 		{
@@ -469,14 +474,14 @@
 			"sourceIndexes" : 
 			[
 				4,
-				7
+				10
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				8
+				11
 			]
 		}
 	],
@@ -513,8 +518,25 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "calculator.h",
+			"compileGroupIndex" : 0,
+			"path" : "mainController.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "mainController.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "mainModel.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "mainModel.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,

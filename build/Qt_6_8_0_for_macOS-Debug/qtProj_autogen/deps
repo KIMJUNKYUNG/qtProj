@@ -240,6 +240,7 @@ qtProj_autogen/timestamp: \
 	/Users/kimjunkyung/Qt/6.8.0/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake \
 	/Users/kimjunkyung/Qt/6.8.0/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake \
 	/Users/kimjunkyung/Qt/6.8.0/macos/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
+	/Users/kimjunkyung/qt/6.8.0/macos/lib/QtCore.framework/Versions/A/Headers/QObject \
 	/Users/kimjunkyung/qt/6.8.0/macos/lib/QtCore.framework/Versions/A/Headers/QStringListModel \
 	/Users/kimjunkyung/qt/6.8.0/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
 	/Users/kimjunkyung/qt/6.8.0/macos/lib/QtCore.framework/Versions/A/Headers/q20iterator.h \
@@ -473,9 +474,11 @@ qtProj_autogen/timestamp: \
 	/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
 	/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/qtProj_autogen/moc_predefs.h \
-	/Users/kimjunkyung/qtProj/calculator.cpp \
-	/Users/kimjunkyung/qtProj/calculator.h \
 	/Users/kimjunkyung/qtProj/main.cpp \
+	/Users/kimjunkyung/qtProj/mainController.cpp \
+	/Users/kimjunkyung/qtProj/mainController.h \
+	/Users/kimjunkyung/qtProj/mainModel.cpp \
+	/Users/kimjunkyung/qtProj/mainModel.h \
 	/Users/kimjunkyung/qtProj/mainwindow.cpp \
 	/Users/kimjunkyung/qtProj/mainwindow.h \
 	/Users/kimjunkyung/qtProj/mainwindow.ui \

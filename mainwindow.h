@@ -7,8 +7,6 @@
 #include <QStringListModel>
 #include <QListWidgetItem>
 
-#include "calculator.h"
-
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;

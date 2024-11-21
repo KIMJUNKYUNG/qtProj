@@ -23,8 +23,12 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(qtProj
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        calculator.h
-        calculator.cpp
+
+
+        mainController.cpp
+        mainController.h
+        mainModel.h
+        mainModel.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET qtProj APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

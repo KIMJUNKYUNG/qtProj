@@ -1,17 +1,16 @@
 #include "mainwindow.h"
+#include "mainController.h"
+#include "mainModel.h"
 
 #include <QApplication>
-
-#define width 281
-#define height 430
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
 
-    w.setFixedSize(width,height);
-    w.show();
+    MainWindow w;
+    MainModel m;
+    MainController c(w, m);
 
     return a.exec();
 }

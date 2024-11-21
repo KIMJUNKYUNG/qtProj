@@ -73,9 +73,17 @@ build CMakeFiles/qtProj.dir/mainwindow.cpp.o: CXX_COMPILER__qtProj_unscanned_Deb
   OBJECT_DIR = CMakeFiles/qtProj.dir
   OBJECT_FILE_DIR = CMakeFiles/qtProj.dir
 
-build CMakeFiles/qtProj.dir/calculator.cpp.o: CXX_COMPILER__qtProj_unscanned_Debug /Users/kimjunkyung/qtProj/calculator.cpp || cmake_object_order_depends_target_qtProj
+build CMakeFiles/qtProj.dir/mainController.cpp.o: CXX_COMPILER__qtProj_unscanned_Debug /Users/kimjunkyung/qtProj/mainController.cpp || cmake_object_order_depends_target_qtProj
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/qtProj.dir/calculator.cpp.o.d
+  DEP_FILE = CMakeFiles/qtProj.dir/mainController.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/qtProj_autogen/include -isystem /Users/kimjunkyung/Qt/6.8.0/macos/lib/QtCore.framework/Headers -iframework /Users/kimjunkyung/Qt/6.8.0/macos/lib -isystem /Users/kimjunkyung/Qt/6.8.0/macos/mkspecs/macx-clang -isystem /Users/kimjunkyung/Qt/6.8.0/macos/include -isystem /Users/kimjunkyung/Qt/6.8.0/macos/lib/QtWidgets.framework/Headers -isystem /Users/kimjunkyung/Qt/6.8.0/macos/lib/QtGui.framework/Headers
+  OBJECT_DIR = CMakeFiles/qtProj.dir
+  OBJECT_FILE_DIR = CMakeFiles/qtProj.dir
+
+build CMakeFiles/qtProj.dir/mainModel.cpp.o: CXX_COMPILER__qtProj_unscanned_Debug /Users/kimjunkyung/qtProj/mainModel.cpp || cmake_object_order_depends_target_qtProj
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/qtProj.dir/mainModel.cpp.o.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
   INCLUDES = -I/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/qtProj_autogen/include -isystem /Users/kimjunkyung/Qt/6.8.0/macos/lib/QtCore.framework/Headers -iframework /Users/kimjunkyung/Qt/6.8.0/macos/lib -isystem /Users/kimjunkyung/Qt/6.8.0/macos/mkspecs/macx-clang -isystem /Users/kimjunkyung/Qt/6.8.0/macos/include -isystem /Users/kimjunkyung/Qt/6.8.0/macos/lib/QtWidgets.framework/Headers -isystem /Users/kimjunkyung/Qt/6.8.0/macos/lib/QtGui.framework/Headers
   OBJECT_DIR = CMakeFiles/qtProj.dir
@@ -89,7 +97,7 @@ build CMakeFiles/qtProj.dir/calculator.cpp.o: CXX_COMPILER__qtProj_unscanned_Deb
 #############################################
 # Link the executable qtProj.app/Contents/MacOS/qtProj
 
-build qtProj.app/Contents/MacOS/qtProj: CXX_EXECUTABLE_LINKER__qtProj_Debug CMakeFiles/qtProj.dir/qtProj_autogen/mocs_compilation.cpp.o CMakeFiles/qtProj.dir/main.cpp.o CMakeFiles/qtProj.dir/mainwindow.cpp.o CMakeFiles/qtProj.dir/calculator.cpp.o | /Users/kimjunkyung/Qt/6.8.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/kimjunkyung/Qt/6.8.0/macos/lib/QtGui.framework/Versions/A/QtGui /Users/kimjunkyung/Qt/6.8.0/macos/lib/QtCore.framework/Versions/A/QtCore || qtProj_autogen qtProj_autogen_timestamp_deps
+build qtProj.app/Contents/MacOS/qtProj: CXX_EXECUTABLE_LINKER__qtProj_Debug CMakeFiles/qtProj.dir/qtProj_autogen/mocs_compilation.cpp.o CMakeFiles/qtProj.dir/main.cpp.o CMakeFiles/qtProj.dir/mainwindow.cpp.o CMakeFiles/qtProj.dir/mainController.cpp.o CMakeFiles/qtProj.dir/mainModel.cpp.o | /Users/kimjunkyung/Qt/6.8.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/kimjunkyung/Qt/6.8.0/macos/lib/QtGui.framework/Versions/A/QtGui /Users/kimjunkyung/Qt/6.8.0/macos/lib/QtCore.framework/Versions/A/QtCore || qtProj_autogen qtProj_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
   LINK_LIBRARIES = -Wl,-rpath,/Users/kimjunkyung/Qt/6.8.0/macos/lib  /Users/kimjunkyung/Qt/6.8.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets  /Users/kimjunkyung/Qt/6.8.0/macos/lib/QtGui.framework/Versions/A/QtGui  -framework OpenGL  -framework AGL  -framework AppKit  -framework ImageIO  -framework Metal  /Users/kimjunkyung/Qt/6.8.0/macos/lib/QtCore.framework/Versions/A/QtCore  -framework IOKit  -framework DiskArbitration  -framework UniformTypeIdentifiers
   LINK_PATH = -F/Users/kimjunkyung/Qt/6.8.0/macos/lib

@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-fb5c58948f70ac092e23.json",
+					"jsonFile" : "directory-.-Debug-fe534214c8895255b666.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "qtProj::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-qtProj-Debug-1b6dbb9004c6661ef30d.json",
+					"jsonFile" : "target-qtProj-Debug-5ebccabf76e61e593f11.json",
 					"name" : "qtProj",
 					"projectIndex" : 0
 				},

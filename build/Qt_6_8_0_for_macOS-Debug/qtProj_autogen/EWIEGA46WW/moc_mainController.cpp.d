@@ -1,4 +1,4 @@
-/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/qtProj_autogen/EWIEGA46WW/moc_mainwindow.cpp: /Users/kimjunkyung/qtProj/mainwindow.h \
+/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/qtProj_autogen/EWIEGA46WW/moc_mainController.cpp: /Users/kimjunkyung/qtProj/mainController.h \
   /Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/qtProj_autogen/moc_predefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternal.h \
@@ -90,6 +90,7 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/syslimits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/wait.h \
+  /Users/kimjunkyung/qt/6.8.0/macos/lib/QtCore.framework/Versions/A/Headers/QObject \
   /Users/kimjunkyung/qt/6.8.0/macos/lib/QtCore.framework/Versions/A/Headers/QStringListModel \
   /Users/kimjunkyung/qt/6.8.0/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
   /Users/kimjunkyung/qt/6.8.0/macos/lib/QtCore.framework/Versions/A/Headers/q20iterator.h \
@@ -265,4 +266,6 @@
   /Users/kimjunkyung/qt/6.8.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgets-config.h \
   /Users/kimjunkyung/qt/6.8.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsexports.h \
   /Users/kimjunkyung/qt/6.8.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsglobal.h \
-  /Users/kimjunkyung/qt/6.8.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qwidget.h
+  /Users/kimjunkyung/qt/6.8.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qwidget.h \
+  /Users/kimjunkyung/qtProj/mainModel.h \
+  /Users/kimjunkyung/qtProj/mainwindow.h

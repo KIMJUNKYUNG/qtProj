@@ -301,9 +301,15 @@
 	"HEADERS" : 
 	[
 		[
-			"/Users/kimjunkyung/qtProj/calculator.h",
+			"/Users/kimjunkyung/qtProj/mainController.h",
 			"MU",
-			"EWIEGA46WW/moc_calculator.cpp",
+			"EWIEGA46WW/moc_mainController.cpp",
+			null
+		],
+		[
+			"/Users/kimjunkyung/qtProj/mainModel.h",
+			"MU",
+			"EWIEGA46WW/moc_mainModel.cpp",
 			null
 		],
 		[
@@ -370,8 +376,9 @@
 	"SETTINGS_FILE" : "/Users/kimjunkyung/qtProj/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/qtProj_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/Users/kimjunkyung/qtProj/calculator.cpp", "MU", null ],
 		[ "/Users/kimjunkyung/qtProj/main.cpp", "MU", null ],
+		[ "/Users/kimjunkyung/qtProj/mainController.cpp", "MU", null ],
+		[ "/Users/kimjunkyung/qtProj/mainModel.cpp", "MU", null ],
 		[ "/Users/kimjunkyung/qtProj/mainwindow.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
