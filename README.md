@@ -8,9 +8,9 @@
 
 <h2> Easy User Interface Calculator </h2>
 <p>
-![스크린샷 2024-11-22 09 20 49](https://github.com/user-attachments/assets/d276029e-a0b3-4506-a2e0-e60fa71695da)
-![스크린샷 2024-11-22 09 32 26](https://github.com/user-attachments/assets/1bf98f88-2f7c-4231-a37d-915dfe09762f)
-![스크린샷 2024-11-22 09 32 12](https://github.com/user-attachments/assets/1d271d63-b0a8-49c4-9bd0-5f2652334465)
+<img width="281" alt="image" src="https://github.com/user-attachments/assets/d276029e-a0b3-4506-a2e0-e60fa71695da">
+<img width="281" alt="image" src="https://github.com/user-attachments/assets/1bf98f88-2f7c-4231-a37d-915dfe09762f">
+<img width="281" alt="image" src="https://github.com/user-attachments/assets/1d271d63-b0a8-49c4-9bd0-5f2652334465">
 </p>
 
 <h2>Explanation</h2>
