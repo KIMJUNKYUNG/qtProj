@@ -105,22 +105,22 @@ void MainWindow::slotUiBtnPushed(){
             emit signalBtnPushedToCtrl("9");
             break;
         case 10:
-            emit signalBtnPushedToCtrl("+");
+            emit signalBtnPushedToCtrl("10");   // +
             break;
         case 11:
-            emit signalBtnPushedToCtrl("-");
+            emit signalBtnPushedToCtrl("11");    // -
             break;
         case 12:
-            emit signalBtnPushedToCtrl("*");
+            emit signalBtnPushedToCtrl("12");    // *
             break;
         case 13:
-            emit signalBtnPushedToCtrl("/");
+            emit signalBtnPushedToCtrl("13");    // "/"
             break;
         case 14:
-            emit signalBtnPushedToCtrl("=");
+            emit signalBtnPushedToCtrl("14");    // =
             break;
         case 15:
-            emit signalBtnPushedToCtrl(".");
+            emit signalBtnPushedToCtrl("15");    // .
             break;
         case 16:
             emit signalBtnPushedToCtrl("16");       // +-

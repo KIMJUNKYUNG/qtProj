@@ -77,13 +77,13 @@ void MainController::slotPushedButton(QString pushedStr)
             mainModel->qStrListNumbers[curTextIndex].append("9");
             break;
         }
-    }else if(sigIndex == 15){
+    }else if(sigIndex == 15){   // '.'
         QString curStr = mainModel->qStrListNumbers[curTextIndex];
         if(curStr == ""){
             return;
         }
         mainModel->qStrListNumbers[curTextIndex].append(".");
-    }else if(sigIndex == 16){
+    }else if(sigIndex == 16){   //  "+-"
         QString curStr = mainModel->qStrListNumbers[curTextIndex];
         if(curStr == ""){
             mainModel->qStrListNumbers[curTextIndex].append("-");
